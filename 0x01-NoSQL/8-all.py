@@ -1,5 +1,3 @@
-from pymongo import MongoClient
-
+#!/usr/bin/env python3
 def list_all(mongo_collection):
-    client = MongoClient()
     return mongo_collection.find()
