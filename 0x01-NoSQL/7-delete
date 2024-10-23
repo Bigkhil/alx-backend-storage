@@ -1,0 +1,5 @@
+// delete all the documents which meet specific filter
+db.school.delete(
+    {name : "Holberton school"},
+    {multi : true}
+    )
