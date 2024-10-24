@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """python script"""
 
-from pymongo import MongoClient
 
+if __name__ == "__main__":
+    from pymongo import MongoClient
 
-def main():
-    """main function"""
     client = MongoClient()
     logs = client.logs.nginx
     print(f'{logs.count_documents({})} logs')
@@ -20,7 +19,3 @@ def main():
         f'{logs.count_documents(
             {"method": "GET", "path": "/status"})} status check'
         )
-
-
-if __name__ == "__main__":
-    main()
