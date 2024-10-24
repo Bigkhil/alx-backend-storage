@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 from pymongo import MongoClient
+
+
 """
 python script
 """
 
 
 def main():
-    '''main function'''
+    """main function"""
     client = MongoClient()
     logs = client.logs.nginx
     print(f'{logs.count_documents({})} logs')
