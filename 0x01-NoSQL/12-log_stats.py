@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from pymongo import MongoClient
-
-
 """
 python script
 """
+
+from pymongo import MongoClient
 
 
 def main():
