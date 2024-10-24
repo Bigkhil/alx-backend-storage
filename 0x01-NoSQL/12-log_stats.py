@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from pymongo import MongoClient
-"""python script"""
+"""
+python script
+"""
 
 
 def main():
