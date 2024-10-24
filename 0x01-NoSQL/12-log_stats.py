@@ -2,12 +2,10 @@
 """
 python script
 """
-
-
 if __name__ == "__main__":
     from pymongo import MongoClient
 
-    client = MongoClient()
+    client = MongoClient('mongodb://127.0.0.1:27017')
     logs = client.logs.nginx
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print(f'{logs.count_documents({})} logs')
