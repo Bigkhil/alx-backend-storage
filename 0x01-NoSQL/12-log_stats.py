@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""python script"""
+"""
+python script
+"""
 
 
 if __name__ == "__main__":
@@ -7,9 +9,9 @@ if __name__ == "__main__":
 
     client = MongoClient()
     logs = client.logs.nginx
+    methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print(f'{logs.count_documents({})} logs')
     print("Methods:")
-    methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     for method in methods:
         print(f'    method {method}: {logs.count_documents(
             {"method": method})
