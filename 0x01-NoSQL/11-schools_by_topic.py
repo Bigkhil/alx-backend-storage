@@ -4,6 +4,7 @@
 
 def schools_by_topic(mongo_collection, topic):
     '''find docs by filter'''
-    mongo_collection.find_many(
+    res = mongo_collection.find_many(
         {"topic": topic}
     )
+    return res
